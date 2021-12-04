@@ -1,0 +1,32 @@
+{
+  "expo": {
+    "name": "carpet_service",
+    "slug": "carpet_service",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/transparent-logo.png",
+    "splash": {
+      "image": "./assets/transparent-logo.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/transparent-logo.png",
+        "backgroundColor": "#FFFFFF"
+      }
+    },
+    "web": {
+      "favicon": "./assets/transparent-logo.png"
+    }
+  }
+}
