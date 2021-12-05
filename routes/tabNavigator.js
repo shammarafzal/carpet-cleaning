@@ -3,7 +3,7 @@ import { Text, View } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
-
+import HomeScreen from "../screens/homeScreen";
 function Feed() {
   return (
     <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
@@ -33,14 +33,14 @@ const Tab = createMaterialBottomTabNavigator();
 function MyTabs() {
   return (
     <Tab.Navigator
-      initialRouteName="Feed"
-      activeColor="#e91e63"
+      initialRouteName="HomeScreen"
+      activeColor="#ddd"
       labelStyle={{ fontSize: 12 }}
-      style={{ backgroundColor: "tomato" }}
+      style={{ backgroundColor: "white" }}
     >
       <Tab.Screen
-        name="Feed"
-        component={Feed}
+        name="HomeScreen"
+        component={HomeScreen}
         options={{
           tabBarLabel: "Home",
           tabBarIcon: ({ color }) => (
@@ -49,12 +49,22 @@ function MyTabs() {
         }}
       />
       <Tab.Screen
-        name="Notifications"
+        name="Bookings"
         component={Notifications}
         options={{
-          tabBarLabel: "Updates",
+          tabBarLabel: "Bookings",
           tabBarIcon: ({ color }) => (
-            <MaterialCommunityIcons name="bell" color={color} size={26} />
+            <MaterialCommunityIcons name="book" color={color} size={26} />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="MyWallet"
+        component={Profile}
+        options={{
+          tabBarLabel: "My Wallet",
+          tabBarIcon: ({ color }) => (
+            <MaterialCommunityIcons name="wallet" color={color} size={26} />
           ),
         }}
       />
